@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pari o dispari</title>
+  <style>
+    #numberBox {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 200px; 
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <button id="generateButton">GENERA UN NUMERO CASUALE</button>
+  <div id="numberBox"></div>
+
+  <script>
+    const generateButton = document.getElementById('generateButton');
+    const numberBox = document.getElementById('numberBox');
+
+    generateButton.addEventListener('click', () => {
+      const randomNumber = Math.floor(Math.random() * 100) + 1; 
+
+      if (randomNumber % 2 === 0) {
+        numberBox.textContent = 'Pari: ' + randomNumber;
+      } else {
+        numberBox.textContent = 'Dispari: ' + randomNumber;
+      }
+    });
+  </script>
+</body>
+</html>
