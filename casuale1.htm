@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Generator</title>
+</head>
+<body>
+  <h1>GENERA UN NUMERO CASUALE</h1>
+  <p id="randomNumber"></p>
+  <button id="generateButton">Genera</button>
+  <script>
+    const generateButton = document.getElementById('generateButton');
+    const randomNumberDisplay = document.getElementById('randomNumber');
+
+    generateButton.addEventListener('click', () => {
+      const randomNumber = Math.floor(Math.random() * 100) + 1; // Generate a random number between 1 and 100
+      randomNumberDisplay.textContent = randomNumber;
+    });
+  </script>
+</body>
+</html>
